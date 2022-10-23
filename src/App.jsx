@@ -2,15 +2,16 @@ import React from "react";
 import Category from "./components/Category";
 import Search from "./components/Search";
 import Pages from "./pages/Pages";
-import { BrowserRouter, Link } from "react-router-dom";
-import styled from "styled-components";
+import { BrowserRouter } from "react-router-dom";
 import { GiKnifeFork } from "react-icons/gi";
+import { Logo, Nav } from "./components/styledComponents/styledApp";
+
 const App = () => {
   return (
     <BrowserRouter>
       <Nav>
         <GiKnifeFork />
-        <Logo to={"/"}>delicious</Logo>
+        <Logo to={"/"}>online recepti</Logo>
       </Nav>
       <Search />
       <Category />
@@ -18,20 +19,5 @@ const App = () => {
     </BrowserRouter>
   );
 };
-
-const Logo = styled(Link)`
-  text-decoration: none;
-  font-size: 1.5rem;
-  font-weight: 400;
-`;
-const Nav = styled.div`
-  padding: 4rem 0;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  svg {
-    font-size: 2rem;
-  }
-`;
 
 export default App;
